@@ -10,9 +10,9 @@ const Home = () => {
 
                 <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200"><NavLink to={'/toDoList'}>To-Do List</NavLink></p>
 
-                <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200">Counter</p>
+                <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200"><NavLink to={'/counter'}>Counter</NavLink></p>
 
-                <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200">Drum Kit</p>
+                <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200"><NavLink to={'/drumKit'}>Drum Kit</NavLink></p>
 
                 <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200">Countdown Timer</p>
 
