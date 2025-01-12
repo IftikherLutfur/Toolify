@@ -4,6 +4,7 @@ import {
 import Root from "./Components/Root";
 import Home from "./Components/Home/Home";
 import Calculator from "./Components/Services/Calculator";
+import ToDoList from "./Components/Services/ToDoList";
 
   export const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ import Calculator from "./Components/Services/Calculator";
       {
         path:"/calculator",
         element:<Calculator/>
+      },
+      {
+        path:'/toDoList',
+        element:<ToDoList/>
       },
     ]
     },
