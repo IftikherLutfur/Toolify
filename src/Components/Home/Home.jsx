@@ -14,7 +14,7 @@ const Home = () => {
 
                 <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200"><NavLink to={'/drumKit'}>Drum Kit</NavLink></p>
 
-                <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200">Countdown Timer</p>
+                <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200"><NavLink to={'/stopWatch'}>Stopwatch</NavLink></p>
 
                 <p className="text-xl border-[1px] h-12 w-full flex items-center justify-center rounded-md font-semibold hover:cursor-pointer hover:bg-gray-200 transition duration-200"> Image Slider</p>
 

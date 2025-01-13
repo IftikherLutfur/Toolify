@@ -6,6 +6,7 @@ import Home from "./Components/Home/Home";
 import Calculator from "./Components/Services/Calculator";
 import ToDoList from "./Components/Services/ToDoList";
 import Counter from "./Components/Services/Counter";
+import DrumKit from "./Components/Services/DrumKit";
 
   export const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ import Counter from "./Components/Services/Counter";
       {
         path:'/counter',
         element:<Counter/>
+      },
+      {
+        path:'/drumKit',
+        element:<DrumKit/>
       },
     ]
     },
