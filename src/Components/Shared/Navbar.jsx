@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 const Navbar = () => {
 
+  
+
 
   const [time, setTime] = useState("00:00:00")
   function updateClock() {
@@ -32,17 +34,7 @@ const Navbar = () => {
                 <div>
                 <h1 className="text-xl font-semibold">Welcome to the Toolify</h1>
                 </div>
-                <div>
-                <label htmlFor="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-800">
-	<span>Left</span>
-	<span className="relative">
-		<input id="Toggle1" type="checkbox" className="hidden peer" />
-		<div className="w-10 h-6 rounded-full shadow-inner bg-gray-300 peer-checked:bg-violet-600"></div>
-		<div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-100"></div>
-	</span>
-	<span>Right</span>
-</label>
-                </div>
+               
             </div>
         </div>
     );

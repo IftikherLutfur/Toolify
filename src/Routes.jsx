@@ -7,6 +7,7 @@ import Calculator from "./Components/Services/Calculator";
 import ToDoList from "./Components/Services/ToDoList";
 import Counter from "./Components/Services/Counter";
 import DrumKit from "./Components/Services/DrumKit";
+import StopWatch from "./Components/Services/StopWatch";
 
   export const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ import DrumKit from "./Components/Services/DrumKit";
       {
         path:'/drumKit',
         element:<DrumKit/>
+      },
+      {
+        path:'/stopWatch',
+        element:<StopWatch/>
       },
     ]
     },
