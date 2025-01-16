@@ -2,110 +2,110 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const ToDoList = () => {
-  const [tasks, setTasks] = useState([]); // Corrected to an array
-  const [newTask, setNewTask] = useState('');
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState("");
 
-  function handleInputChange(event) {
-    setNewTask(event.target.value);
-  }
+  // Handle input change
+  const handleInputChange = (event) => setNewTask(event.target.value);
 
-  function addTask() {
-    if (newTask.trim()) { // Avoid adding empty tasks
-      setTasks((t) => [...t, newTask]);
-      setNewTask(''); // Clear input after adding
+  // Add new task
+  const addTask = () => {
+    if (newTask.trim()) {
+      setTasks((prevTasks) => [...prevTasks, newTask]);
+      setNewTask("");
     }
-  }
+  };
 
-  function deleteTask(index) {
-    setTasks(tasks.filter((_, i) => i !== index));
-  }
+  // Delete task
+  const deleteTask = (index) => {
+    setTasks((prevTasks) => prevTasks.filter((_, i) => i !== index));
+  };
 
-  function moveTaskUp(index) {
+  // Move task up
+  const moveTaskUp = (index) => {
     if (index > 0) {
-      const newTasks = [...tasks];
-      const temp = newTasks[index];
-      newTasks[index] = newTasks[index - 1];
-      newTasks[index - 1] = temp;
-      setTasks(newTasks);
+      const updatedTasks = [...tasks];
+      [updatedTasks[index - 1], updatedTasks[index]] = [updatedTasks[index], updatedTasks[index - 1]];
+      setTasks(updatedTasks);
     }
-  }
+  };
 
-  function moveTaskDown(index) {
+  // Move task down
+  const moveTaskDown = (index) => {
     if (index < tasks.length - 1) {
-      const newTasks = [...tasks];
-      const temp = newTasks[index];
-      newTasks[index] = newTasks[index + 1];
-      newTasks[index + 1] = temp;
-      setTasks(newTasks);
+      const updatedTasks = [...tasks];
+      [updatedTasks[index], updatedTasks[index + 1]] = [updatedTasks[index + 1], updatedTasks[index]];
+      setTasks(updatedTasks);
     }
-  }
+  };
 
   return (
-    <div>
-      <nav aria-label="breadcrumb" className="w-full flex justify-center p-4 dark:bg-gray-100 dark:text-gray-800">
-	<ol className="flex h-8 space-x-2">
-		<li className="flex items-center">
-			<NavLink to={'/'}><a rel="noopener noreferrer"  title="Back to homepage" className="hover:underline">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 pr-1 dark:text-gray-600">
-					<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-				</svg>
-			</a></NavLink>
-		</li>
-		<li className="flex items-center space-x-2">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor" className="w-2 h-2 mt-1 transform rotate-90 fill-current dark:text-gray-400">
-				<path d="M32 30.031h-32l16-28.061z"></path>
-			</svg>
-			<a rel="noopener noreferrer" className="flex items-center px-1 capitalize hover:underline">To Do List</a>
-		</li>
-		
-	
-	</ol>
-</nav>
-      <h1 className="text-center text-3xl font-semibold">To Do List</h1>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-6">
+      {/* Navigation */}
+      <nav aria-label="breadcrumb" className="bg-white shadow py-4">
+        <div className="container mx-auto px-4">
+          <ol className="flex items-center space-x-2 text-sm">
+            <li>
+              <NavLink to="/" className="hover:underline text-blue-600">
+                Home
+              </NavLink>
+            </li>
+            <li>/</li>
+            <li className="text-gray-600">To Do List</li>
+          </ol>
+        </div>
+      </nav>
 
-      <div className="flex justify-center mt-5">
-        <div>
+      {/* Title */}
+      <h1 className="text-center text-3xl font-bold mt-6">To Do List</h1>
+
+      {/* Add Task Section */}
+      <div className="flex justify-center mt-8">
+        <div className="flex gap-3">
           <input
             type="text"
             placeholder="Enter a task"
             value={newTask}
             onChange={handleInputChange}
-            className="border-[1px] p-1 border-black  rounded-sm"
+            className="border rounded-lg p-2 w-64 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
-            className="add-btn border-[1px] p-1 bg-blue-600 text-white px-3"
             onClick={addTask}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Add
+            Add Task
           </button>
         </div>
       </div>
 
-      <div className="mt-5">
-        <ul>
+      {/* Task List */}
+      <div className="mt-8">
+        <ul className="max-w-2xl mx-auto space-y-4">
           {tasks.map((task, index) => (
-            <li key={index} className=" items-center text-white py-1">
-              <div className="flex bg-black gap-7 justify-center">
-             <div className="py-3"> <span className="text-xl font-semibold ">{task}</span></div>
-              <div className="py-3 text-xl">
+            <li key={index} className="bg-white shadow rounded-lg flex items-center justify-between p-4">
+              <span className="text-lg font-medium">{task}</span>
+              <div className="flex gap-2">
                 <button
-                  className="mr-2 bg-red-600"
-                  onClick={() => deleteTask(index)}
-                >
-                  Delete
-                </button>
-                <button
-                  className="mr-2 text-xl bg-blue-500"
                   onClick={() => moveTaskUp(index)}
+                  className="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  aria-label={`Move ${task} up`}
                 >
-                 ☝️
+                  ☝️
                 </button>
-                <button className=" text-xl bg-blue-500"
+                <button
                   onClick={() => moveTaskDown(index)}
+                  className="px-3 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  aria-label={`Move ${task} down`}
                 >
                   👇
                 </button>
-              </div>
+                <button
+                  onClick={() => deleteTask(index)}
+                  className="px-3 py-1 bg-red-500 text-white rounded-lg hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                  aria-label={`Delete ${task}`}
+                >
+                  Delete
+                </button>
               </div>
             </li>
           ))}

@@ -8,6 +8,7 @@ import ToDoList from "./Components/Services/ToDoList";
 import Counter from "./Components/Services/Counter";
 import DrumKit from "./Components/Services/DrumKit";
 import StopWatch from "./Components/Services/StopWatch";
+import TextTool from "./Components/Services/TextTool";
 
   export const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ import StopWatch from "./Components/Services/StopWatch";
         path:'/stopWatch',
         element:<StopWatch/>
       },
+      {
+        path:'/textTool',
+        element:<TextTool/>
+      }
     ]
     },
   ]);
