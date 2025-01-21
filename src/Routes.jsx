@@ -9,6 +9,7 @@ import Counter from "./Components/Services/Counter";
 import DrumKit from "./Components/Services/DrumKit";
 import StopWatch from "./Components/Services/StopWatch";
 import TextTool from "./Components/Services/TextTool";
+import QouteGenerator from "./Components/Services/QouteGenerator";
 
   export const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ import TextTool from "./Components/Services/TextTool";
       {
         path:'/textTool',
         element:<TextTool/>
+      },
+      {
+        path:'/quote',
+        element:<QouteGenerator/>
       }
     ]
     },

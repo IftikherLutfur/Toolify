@@ -7,11 +7,8 @@ const Home = () => {
         { name: "Counter", path: "/counter" },
         { name: "Drum Kit", path: "/drumKit" },
         { name: "Stopwatch", path: "/stopWatch" },
-        { name: "Image Slider", path: "" },
         { name: "Capitalize Text Tool", path: "/textTool" },
-        { name: "Search Filter", path: "" },
-        { name: "Color Changer", path: "" },
-        { name: "Jokes Generator", path: "" },
+        { name: "Quote Generator", path: "/quote" },
     ];
 
     return (
