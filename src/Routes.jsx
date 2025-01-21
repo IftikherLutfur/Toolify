@@ -10,6 +10,7 @@ import DrumKit from "./Components/Services/DrumKit";
 import StopWatch from "./Components/Services/StopWatch";
 import TextTool from "./Components/Services/TextTool";
 import QouteGenerator from "./Components/Services/QouteGenerator";
+import WeatherUpdate from "./Components/Services/WeatherUpdate";
 
   export const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ import QouteGenerator from "./Components/Services/QouteGenerator";
       {
         path:'/quote',
         element:<QouteGenerator/>
+      },
+      {
+        path:'/weather',
+        element:<WeatherUpdate/>
       }
     ]
     },

@@ -9,6 +9,7 @@ const Home = () => {
         { name: "Stopwatch", path: "/stopWatch" },
         { name: "Capitalize Text Tool", path: "/textTool" },
         { name: "Quote Generator", path: "/quote" },
+        { name: "Weather Update", path: "/weather" },
     ];
 
     return (
