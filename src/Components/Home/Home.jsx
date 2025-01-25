@@ -11,6 +11,7 @@ const Home = () => {
         { name: "Quote Generator", path: "/quote" },
         { name: "Weather Update", path: "/weather" },
         { name: "Unit Convert Tool", path: "/convertTool" },
+        { name: "Currency Converter", path: "/currency" },
     ];
 
     return (

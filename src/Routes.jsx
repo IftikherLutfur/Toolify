@@ -12,6 +12,7 @@ import TextTool from "./Components/Services/TextTool";
 import QouteGenerator from "./Components/Services/QouteGenerator";
 import WeatherUpdate from "./Components/Services/WeatherUpdate";
 import ConverterdTool from "./Components/Services/ConverterdTool";
+import Currency from "./Components/Services/Currency";
 
   export const router = createBrowserRouter([
     {
@@ -57,6 +58,10 @@ import ConverterdTool from "./Components/Services/ConverterdTool";
       {
         path:'/convertTool',
         element:<ConverterdTool/>
+      },
+      {
+        path:'/currency',
+        element:<Currency/>
       }
     ]
     },
