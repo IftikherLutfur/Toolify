@@ -4,7 +4,6 @@ import heavyRain from '../../assets/heavy-rain.png'
 import humidity from '../../assets/humidity.png'
 import drizzle from "../../assets/drizzle.png"
 import snow from '../../assets/snow.png'
-import sun from '../../assets/sun.png'
 import sunny from '../../assets/sunny.png'
 import wind from '../../assets/wind.png'
 import { CiSearch } from "react-icons/ci";

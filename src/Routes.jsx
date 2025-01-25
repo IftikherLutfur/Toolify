@@ -11,6 +11,7 @@ import StopWatch from "./Components/Services/StopWatch";
 import TextTool from "./Components/Services/TextTool";
 import QouteGenerator from "./Components/Services/QouteGenerator";
 import WeatherUpdate from "./Components/Services/WeatherUpdate";
+import ConverterdTool from "./Components/Services/ConverterdTool";
 
   export const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ import WeatherUpdate from "./Components/Services/WeatherUpdate";
       {
         path:'/weather',
         element:<WeatherUpdate/>
+      },
+      {
+        path:'/convertTool',
+        element:<ConverterdTool/>
       }
     ]
     },

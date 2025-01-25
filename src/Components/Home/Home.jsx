@@ -10,6 +10,7 @@ const Home = () => {
         { name: "Capitalize Text Tool", path: "/textTool" },
         { name: "Quote Generator", path: "/quote" },
         { name: "Weather Update", path: "/weather" },
+        { name: "Unit Convert Tool", path: "/convertTool" },
     ];
 
     return (
