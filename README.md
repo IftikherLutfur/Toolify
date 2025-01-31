@@ -8,6 +8,12 @@ Key Offerings:
 ✅ Utility Tools – Calculator, Capitalize Text, Unit & Currency Converter
 ✅ Entertainment & Fun – Drum Kit, Quote Generator
 ✅ Live Updates – Weather Update, Currency Conversion
+## Tech Stack:
+🚀 Frontend: React.js (Component-Based Architecture)
+🎨 Styling: Tailwind CSS (Modern & Responsive UI)
+⚡ Logic & Functionality: JavaScript (Interactive Features)
+
+This scalable project allows the addition of more tools in the future, making it a one-stop solution for multiple user needs. 🚀
 
 The website is scalable, meaning more tools can be added over time, making it a one-stop solution for various user needs. 🚀
 # 🔥 Key Features of the Website
