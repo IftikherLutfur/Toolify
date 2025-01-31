@@ -26,7 +26,7 @@ const Navbar = () => {
 
     return (
         <div> 
-            <div className="flex justify-between px-16 py-5 bg-zinc-800 text-white bg-opacity-80">
+            <div className="flex justify-between px-16 py-5 bg-zinc-950 text-white bg-opacity-80">
                 <div>
                <h1  className="text-xl font-semibold mb-0">{time} <br />
                </h1>

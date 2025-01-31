@@ -26,7 +26,7 @@ const Home = () => {
                 {services.map((service, index) => (
                     <div
                         key={index}
-                        className="text-xl border h-12 flex items-center justify-center rounded-md font-semibold bg-blue-600 text-white hover:bg-blue-700 hover:cursor-pointer transition duration-200">
+                        className="text-xl border h-12 flex items-center justify-center rounded-md font-semibold bg-purple-700 text-white hover:bg-purple-600 hover:cursor-pointer transition duration-200">
                         {service.path ? (
                             <NavLink to={service.path} className="w-full h-full flex items-center justify-center">
                                 {service.name}
@@ -37,6 +37,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+                <h1 className="text-xl mt-10  text-center">More tools cooming...</h1>
         </div>
     );
 };
